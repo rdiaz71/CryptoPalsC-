@@ -35,7 +35,7 @@ struct Bin64 {
 
 // Binary to Base64 conversion lookup table
 const Bin64 b64_lookup[64] = { {"000000", 'A'},
-			      {"000001", 'B'},
+			 	{"000001", 'B'},
 				{"000010", 'C'},
 				{"000011", 'D'},
 				{"000100", 'E'},
