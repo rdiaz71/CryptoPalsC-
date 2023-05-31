@@ -1,12 +1,5 @@
-#include<iostream>
 #include<string>
-
-// Struct for looking up hex to binary conversions
-struct HexBin {
-	char hex;
-	std::string binary;
-};
-
+#include "hex_to_64.h"
 
 // Hex to binary conversion lookup table
 const HexBin hex_lookup[16] = { {'0',"0000"},
@@ -25,12 +18,6 @@ const HexBin hex_lookup[16] = { {'0',"0000"},
 				{'D',"1101"},
 				{'E',"1110"},
 				{'F',"1111"},
-};
-
-// Struct for looking up binary to Base64 conversions
-struct Bin64 {
-	std::string binary;
-	char base64;
 };
 
 // Binary to Base64 conversion lookup table
@@ -99,6 +86,7 @@ const Bin64 b64_lookup[64] = { {"000000", 'A'},
 				{"111110", '+'},
 				{"111111", '/'},
 };
+
 // Function to convert hex string to binary
 // Returns binary string
 std::string hexToBinary(std::string hexStr) {
@@ -156,7 +144,6 @@ std::string binaryToBase64(std::string binStr) {
 	if (padding) {
 		base64 += std::string(padding, '=');
 	}
-
 	return base64;
 }
 
